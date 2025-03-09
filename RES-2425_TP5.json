@@ -1,0 +1,65 @@
+### Passo 1: Criar o recurso do paciente Maria Santos
+{
+  "resourceType": "Patient",
+  "id": "46440651",
+  "name": [
+    {
+      "use": "official",
+      "family": "Santos",
+      "given": ["Maria"]
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1974-06-15"
+}
+
+### Passo 2: Registrar a condição de Pneumonia para o paciente Maria Santos
+{
+  "resourceType": "Condition",
+  "id": "condition1",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "233604007",
+        "display": "Pneumonia (disorder)"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10",
+        "code": "J18.9",
+        "display": "Pneumonia, unspecified"
+      }
+    ],
+    "text": "Pneumonia"
+  },
+  "subject": {
+    "reference": "Patient/00000",
+    "display": "Maria Santos"
+  },
+  "onsetDateTime": "2025-03-10"
+}
+
+### Passo 3: Registar um exame de imagem (Radiografia do Tórax)
+{
+  "resourceType": "Observation",
+  "id": "observation1",
+  "code": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "30745-4",
+        "display": "Radiologic imaging study"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "18748-4",
+        "display": "Chest X-ray"
+      }
+    ],
+    "text": "Chest X-ray"
+  },
+  "subject": {
+    "reference": "Patient/00000",
+    "display": "Maria Santos"
+  }
+}
