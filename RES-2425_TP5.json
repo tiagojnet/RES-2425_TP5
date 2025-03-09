@@ -13,7 +13,7 @@
   "birthDate": "1974-06-15"
 }
 
-### Passo 2: Registrar a condição de Pneumonia para o paciente Maria Santos
+### Passo 2: Registar a condição de Pneumonia para o paciente Maria Santos
 {
   "resourceType": "Condition",
   "id": "condition1",
